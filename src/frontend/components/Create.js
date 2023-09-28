@@ -95,6 +95,11 @@ const Create = ({ marketplace, nft }) => {
                 required
                 name="file"
                 onChange={uploadToIPFS}
+                style={{
+                  border: "1px solid #e3e3e3",
+                  borderRadius: "8px",
+                  marginBottom: "15px",
+                }}
               />
               <Form.Control
                 onChange={(e) => setName(e.target.value)}
@@ -102,6 +107,11 @@ const Create = ({ marketplace, nft }) => {
                 required
                 type="text"
                 placeholder="Name"
+                style={{
+                  border: "1px solid #e3e3e3",
+                  borderRadius: "8px",
+                  marginBottom: "15px",
+                }}
               />
               <Form.Control
                 onChange={(e) => setDescription(e.target.value)}
@@ -109,6 +119,12 @@ const Create = ({ marketplace, nft }) => {
                 required
                 as="textarea"
                 placeholder="Description"
+                style={{
+                  border: "1px solid #e3e3e3",
+                  borderRadius: "8px",
+                  marginBottom: "15px",
+                  resize: "vertical",
+                }}
               />
               <Form.Control
                 onChange={(e) => setPrice(e.target.value)}
@@ -116,9 +132,25 @@ const Create = ({ marketplace, nft }) => {
                 required
                 type="number"
                 placeholder="Price in ETH"
+                style={{
+                  border: "1px solid #e3e3e3",
+                  borderRadius: "8px",
+                  marginBottom: "15px",
+                }}
               />
               <div className="d-grid px-0">
-                <Button onClick={createNFT} variant="primary" size="lg">
+                <Button
+                  onClick={createNFT}
+                  variant="primary"
+                  size="lg"
+                  style={{
+                    background: "linear-gradient(to bottom, #3498db, #2980b9)",
+                    border: "none",
+                    borderRadius: "8px",
+                    color: "#fff",
+                    padding: "10px 20px",
+                  }}
+                >
                   Create & List NFT!
                 </Button>
               </div>

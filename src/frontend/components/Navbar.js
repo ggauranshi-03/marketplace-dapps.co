@@ -4,25 +4,30 @@ import market from "./market.png";
 
 const Navigation = ({ web3Handler, account }) => {
   return (
-    <Navbar expand="lg" bg="primary" variant="dark">
+    <Navbar
+      expand="lg"
+      bg="primary"
+      variant="dark"
+      style={{ background: "linear-gradient(to bottom, #3498db, #2980b9)" }}
+    >
       <Container>
         <Navbar.Brand href="">
           {/* <img src={market} width="40" height="40" className="" alt="" /> */}
-          &nbsp; NFT Marketplace
+          <span style={{ color: "#fff" }}>&nbsp; NFT Marketplace</span>
         </Navbar.Brand>
         <Navbar.Toggle aria-controls="responsive-navbar-nav" />
         <Navbar.Collapse id="responsive-navbar-nav">
           <Nav className="me-auto">
-            <Nav.Link as={Link} to="/">
+            <Nav.Link as={Link} to="/" style={{ color: "#fff" }}>
               Home
             </Nav.Link>
-            <Nav.Link as={Link} to="/create">
+            <Nav.Link as={Link} to="/create" style={{ color: "#fff" }}>
               Create
             </Nav.Link>
-            <Nav.Link as={Link} to="/my-listed-items">
+            <Nav.Link as={Link} to="/my-listed-items" style={{ color: "#fff" }}>
               My Listed Items
             </Nav.Link>
-            <Nav.Link as={Link} to="/my-purchases">
+            <Nav.Link as={Link} to="/my-purchases" style={{ color: "#fff" }}>
               My Purchases
             </Nav.Link>
           </Nav>
